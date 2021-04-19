@@ -44,8 +44,12 @@ public class Test : MonoBehaviour
 		}
 		
 		//Magic関数を呼び出して、魔法を使ってください
-		Boss lastboss = new Boss();
-		lastboss.Magic();
+		for(int i = 0; i <= 10; i++)
+		{
+			Boss lastboss = new Boss();
+			lastboss.Magic();
+		}
+		Debug.Log("MPが足りないため魔法が使えない。");
 	}
 
 
