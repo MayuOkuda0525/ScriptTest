@@ -14,12 +14,8 @@ public class Boss
 	{
 		if(mp >= 5)
 		{
-			mp = mp - 5;
+			mp -= 5;
 			Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
-		}
-		else
-		{
-			Debug.Log("MPが足りないため魔法が使えない。");
 		}
 	}	
 }
@@ -44,9 +40,10 @@ public class Test : MonoBehaviour
 		}
 		
 		//Magic関数を呼び出して、魔法を使ってください
+		//Magic関数を10回使った後に、さらにMagic関数を呼び出すと、mpが足りないメッセージを表示することを確認してください
+		Boss lastboss = new Boss();
 		for(int i = 0; i <= 10; i++)
 		{
-			Boss lastboss = new Boss();
 			lastboss.Magic();
 		}
 		Debug.Log("MPが足りないため魔法が使えない。");
